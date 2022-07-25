@@ -17,14 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contato', function () {
-    echo 'estou na pg contato';
+Route::get('/contato', function() {
+    echo 'estou na página de contato';
 });
 
 Route::get('/sobre', function () {
-    echo 'estou na pg sobre';
+    echo 'estou na página de sobre';
 });
 
 Route::get('/produtos', function () {
-    echo 'estou na pg produtos';
+    echo 'estou na página de produtos';
 });

@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdocaoController;
+use App\Http\Controllers\PetController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PetController;
-use App\Http\Controllers\AdocaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/pets', [PetController::class, 'index']);
-Route::post('/pets',[PetController::class, 'store']);
+Route::post('/pets', [PetController::class, 'store']);
 
 Route::post('/adocoes', [AdocaoController::class, 'store']);
 Route::get('/adocoes', [AdocaoController::class, 'index']);

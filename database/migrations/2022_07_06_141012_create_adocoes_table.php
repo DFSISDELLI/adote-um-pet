@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdocoesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,13 @@ class CreateAdocoesTable extends Migration
     {
         Schema::create('adocoes', function (Blueprint $table) {
             $table->id();
+
             $table->string('email', 100);
             $table->decimal('valor');
+
             $table->unsignedBigInteger('pet_id');
             $table->foreign('pet_id')->references('id')->on('pets');
+
             $table->timestamps();
         });
     }
@@ -32,4 +35,4 @@ class CreateAdocoesTable extends Migration
     {
         Schema::dropIfExists('adocoes');
     }
-}
+};
