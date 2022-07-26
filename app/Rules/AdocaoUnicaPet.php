@@ -5,7 +5,7 @@ namespace App\Rules;
 use App\Models\Adocao;
 use Illuminate\Contracts\Validation\Rule;
 
-class adocaoUnicaPet implements Rule
+class AdocaoUnicaPet implements Rule
 {
     /**
      * Create a new rule instance.
